@@ -16,53 +16,55 @@
 
 #### 2. Take a look at the distribution of the three-card sums from the samples that you obtained from Generated Data. Report descriptive statistics for the samples you have drawn. Include at least two measures of central tendency and two measures of variability.
 
-* **Generated Card Data (30 samples) -> Converted Value -> Avgerage (/3) :**  
-(7h Kh 3d) -> 20 -> 6.67  
-(Jd Kh 9d) -> 29 -> 9.67  
-(2c Qs Jd) -> 22 -> 7.33  
-(8h 8d 6c) -> 22 -> 7.33  
-(Qs Kc 3h) -> 23 -> 7.67  
-(4h Ac Qc) -> 24 -> 8  
-(2s 9d Ad) -> 21 -> 7  
-(9c 3d 8c) -> 20 -> 6.67  
-(7h 7c Ac) -> 24 -> 8  
-(7d Jc Qc) -> 27 -> 9  
-(Kd 7d 3s) -> 20 -> 6.67  
-(Jd 3h 10h) -> 23 -> 7.67  
-(Jc 10d 10h) -> 30 -> 10  
-(Qd 8d 3s) -> 21 -> 7  
-(6s 9c 8c) -> 23 -> 7.67  
-(4c 3s 6h) -> 13 -> 4.33  
-(Ac 10h 5s) -> 25 -> 8.33  
-(4s 4d Qs) -> 18 -> 6  
-(4s Ks Jh) -> 24 -> 8  
-(3c Qd 2c) -> 15 -> 5  
-(Kh 5d Ac) -> 25 -> 8.33  
-(2d 7s 5h) -> 14 -> 4.67  
-(Ac 3c 10c) -> 23 -> 7.67  
-(Jd Jc Ad) -> 30 -> 10  
-(10d 5s 6s) -> 21 -> 7  
-(2h 2d 6c) -> 10 -> 3.33  
-(Kh 3d 6d) -> 19 -> 6.67  
-(2c Jd 5c) -> 17 -> 5.67  
-(5s 6h 9d) -> 20 -> 6.67  
-(5s 10d 3h) -> 18 -> 6  
+* **Generated Card Data (30 samples) -> Converted Value :**  
+(7h Kh 3d) -> 20, (Jd Kh 9d) -> 29  
+(2c Qs Jd) -> 22, (8h 8d 6c) -> 22  
+(Qs Kc 3h) -> 23, (4h Ac Qc) -> 24  
+(2s 9d Ad) -> 21, (9c 3d 8c) -> 20  
+(7h 7c Ac) -> 24, (7d Jc Qc) -> 27  
+(Kd 7d 3s) -> 20, (Jd 3h 10h) -> 23  
+(Jc 10d 10h) -> 30, (Qd 8d 3s) -> 21  
+(6s 9c 8c) -> 23, (4c 3s 6h) -> 13  
+(Ac 10h 5s) -> 25, (4s 4d Qs) -> 18  
+(4s Ks Jh) -> 24, (3c Qd 2c) -> 15  
+(Kh 5d Ac) -> 25, (2d 7s 5h) -> 14  
+(Ac 3c 10c) -> 23, (Jd Jc Ad) -> 30  
+(10d 5s 6s) -> 21, (2h 2d 6c) -> 10  
+(Kh 3d 6d) -> 19, (2c Jd 5c) -> 17  
+(5s 6h 9d) -> 20, (5s 10d 3h) -> 18  
 
 
 * **Measures ( central tendency )**
-  * Mean: 7.12
-  * Modal: 7
-  * Median: 7.17
-  
+  * Mean: 21.37
+  * Modal: 20, 23 (if bin size is 5, modal is range of 20~25)
+  * Median: 21.5
   
 * **Measured ( variability )** 
-  * Min: 3.33, Max: 10
-  * Q1: 6.33, Q2: 7.17, Q3: 8
-  * Q3-Q1: 1.67
-  * SD of three-card sums from the samples: 1.55 
+  * Min: 10, Max: 30
+  * Q1: 19, Q2: 21.5, Q3: 24
+  * Q3-Q1: 5
+  * Sampling Deviation(SD): 4.64
  
 #### 3. Create a histogram of the sampled three-card sums. Compare its shape to that of the original distribution. How are they different, and can you explain why this is the case?
 
 ![Image of Avg. of three-card sums](https://raw.githubusercontent.com/deep-diver/cards-sampling-distribution/master/Avg.%20of%20three-card%20sums.png)
 
+* the original distribution histogram looks uniformly distributed even though the value 10 has higher frequency than others, but the sampling distribution histogram looks normally distributed. 
+* the original case gives every cards to be selected with equal probability. However, in the latter case, every combination of 3 cards to be selected at once has different probability. It is very rare to pick (1, 1, 1) or (10, 10, 10) combinations comparing to the randomly shuffled combinations. It makes the left and right side of the histogram to be shallower than center.
+
 #### 4. Make some estimates about values you would get on future draws. Within what range will you expect approximately 90% of your draw values to fall? What is the approximate probability that you will get a draw value of at least 20? Make sure you justify how you obtained your values.
+
+* Within what range will you expect approximately 90% of your draw values to fall?
+  * first, need to know where the first 5% and the last 5% fall.
+    * by changing to the standard normal distribution scale, the first and the last 5% are -1.64 and 1.64 respectively according to the z-table.
+  * second, we can conver the z-table values into the actual value by calculating "value / SD = z-table value". 
+    * since standard deviation is 4.64, those two values are -7.61 and 7.61.
+  * third, add the mean value(21.37) from the sample distribution to the -7.61 and 7.61 values.
+  * calculated range which approximately 90% of values to fall is "13.26 ~ 28.98"
+  
+* What is the approximate probability that you will get a draw value of at least 20?
+  * first, find where "20" is in the standard normal distribution, and the location is its z-table value.
+    * (20 - mean(21.37)) / SD(4.64) == -0.29
+  * second, find the probability for the -0.29 z-table value. 
+    * by looking up the z-table, it is "0.3859"
+  * 1 - 0.3859 = 0.6141 == 61.41%
