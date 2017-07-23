@@ -46,9 +46,23 @@
 (Kh 3d 6d) -> 19 -> 6.67  
 (2c Jd 5c) -> 17 -> 5.67  
 (5s 6h 9d) -> 20 -> 6.67  
-(5s 10d 3h) -> 18 -> 6 
+(5s 10d 3h) -> 18 -> 6  
 
 
+* **Measures ( central tendency )**
+  * Mean: 7.12
+  * Modal: 7
+  * Median: 7.17
+  
+  
+* **Measured ( variability )** 
+  * Min: 3.33, Max: 10
+  * Q1: 6.33, Q2: 7.17, Q3: 8
+  * Q3-Q1: 1.67
+  * SD of three-card sums from the samples: 1.55 
+ 
 #### 3. Create a histogram of the sampled three-card sums. Compare its shape to that of the original distribution. How are they different, and can you explain why this is the case?
+
+![Image of Avg. of three-card sums](https://raw.githubusercontent.com/deep-diver/cards-sampling-distribution/master/Avg.%20of%20three-card%20sums.png)
 
 #### 4. Make some estimates about values you would get on future draws. Within what range will you expect approximately 90% of your draw values to fall? What is the approximate probability that you will get a draw value of at least 20? Make sure you justify how you obtained your values.
