@@ -47,7 +47,7 @@
  
 #### 3. Create a histogram of the sampled three-card sums. Compare its shape to that of the original distribution. How are they different, and can you explain why this is the case?
 
-![Image of Avg. of three-card sums](https://raw.githubusercontent.com/deep-diver/cards-sampling-distribution/master/Avg.%20of%20three-card%20sums.png)
+![Image of Avg. of three-card sums](https://raw.githubusercontent.com/deep-diver/cards-sampling-distribution/master/sample_hist.png)
 
 * the original distribution histogram looks uniformly distributed even though the value 10 has higher frequency than others, but the sampling distribution histogram looks normally distributed. 
 * the original case gives every cards to be selected with equal probability. However, in the latter case, every combination of 3 cards to be selected at once has different probability. It is very rare to pick (1, 1, 1) or (10, 10, 10) combinations comparing to the randomly shuffled combinations. It makes the left and right side of the histogram to be shallower than center.
